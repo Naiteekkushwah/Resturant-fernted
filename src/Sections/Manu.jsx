@@ -80,9 +80,10 @@ const [showerror, seterror] = useState(false);
             });
           }
         }, [showerror]);
+        const API_URL = import.meta.env.VITE_BACKEND_URL;
 async function fetchData() {
   try {
-    const response = await axios.get(`${import.meta.env.BACKEND_UIL}/api/productfind`,{
+    const response = await axios.get(`${API_URL}/api/productfind`,{
        headers:{
       Authorization:`Bearer ${localStorage.getItem('token')}`
     }
@@ -107,7 +108,7 @@ const Handle = (item) => {
 const ADDtocarte = async(item) =>{
   try {
 
-     const res = await axios.post(`${import.meta.env.BACKEND_UIL}/api/ADDtocart`,
+     const res = await axios.post(`${API_URL}/api/ADDtocart`,
     
   { productId: item._id },
   {

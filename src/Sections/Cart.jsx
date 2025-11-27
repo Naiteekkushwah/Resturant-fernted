@@ -8,10 +8,10 @@ const Cart = () => {
   const Navigetor = useNavigate();
   const [product, setProduct] = useState([]);
   const containerRef = useRef(null);
-
+   const API_URL = import.meta.env.VITE_BACKEND_URL;
   async function cartProduct() {
     try {
-      const response = await axios.get(`${import.meta.env.BACKEND_UIL}/api/cartproduct`, {
+      const response = await axios.get(`${API_URL}/api/cartproduct`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

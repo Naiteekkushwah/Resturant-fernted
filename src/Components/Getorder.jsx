@@ -12,10 +12,11 @@ const Getorder = () => {
   const containerRef = useRef(null);
 const [message, setShowMsg] = useState(false);
    const msgRef = useRef(null);
+   const API_URL = import.meta.env.VITE_BACKEND_URL;
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${import.meta.env.BACKEND_UIL}/api/getorder`, {
+      const response = await axios.get(`${API_URL}/api/getorder`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -49,8 +49,9 @@ const [errormassage, seterrormassage] = useState('')
   fullname:name,
   Cpassword:Cpassword,
  }
+  const API_URL = import.meta.env.VITE_BACKEND_URL;
 try {
-  const response = await axios.post(`${import.meta.env.BACKEND_UIL}/api/register`, data);
+  const response = await axios.post(`${API_URL}/api/register`, data);
 
   if (response.status === 200) {
       localStorage.setItem('token',response.data.token)

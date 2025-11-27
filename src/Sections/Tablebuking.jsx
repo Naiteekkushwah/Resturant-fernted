@@ -18,9 +18,10 @@ const TableBooking = () => {
   const submitevant = async (e) => {
     e.preventDefault();
     const bookingData = { date, time, guests };
+     const API_URL = import.meta.env.VITE_BACKEND_URL;
     try {
       const response = await axios.post(
-        `${import.meta.env.BACKEND_UIL}/api/tablbooking`,
+        `${API_URL}/api/tablbooking`,
         bookingData,
         {
           headers: {

@@ -17,10 +17,11 @@ const Order = () => {
 const [showerror, seterror] = useState(false);
  const [errormassage, seterrormassage] = useState('')
  console.log(errormassage);
+    const API_URL = import.meta.env.VITE_BACKEND_URL;
   async function handleOrder(product) {
     try {
       const res = await axios.post(
-     `${import.meta.env.BACKEND_UIL}/api/orders`,
+     `${API_URL}/api/orders`,
         { productId: product._id },
         {
           headers: {
