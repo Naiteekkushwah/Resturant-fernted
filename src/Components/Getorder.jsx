@@ -15,7 +15,7 @@ const [message, setShowMsg] = useState(false);
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:4000/api/getorder", {
+      const response = await axios.get(`${import.meta.env.BACKEND_UIL}/api/getorder`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

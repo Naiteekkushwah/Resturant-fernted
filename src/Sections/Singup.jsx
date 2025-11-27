@@ -50,7 +50,7 @@ const [errormassage, seterrormassage] = useState('')
   Cpassword:Cpassword,
  }
 try {
-  const response = await axios.post('http://localhost:4000/api/register', data);
+  const response = await axios.post(`${import.meta.env.BACKEND_UIL}/api/register`, data);
 
   if (response.status === 200) {
       localStorage.setItem('token',response.data.token)

@@ -11,7 +11,7 @@ const Cart = () => {
 
   async function cartProduct() {
     try {
-      const response = await axios.get("http://localhost:4000/api/cartproduct", {
+      const response = await axios.get(`${import.meta.env.BACKEND_UIL}/api/cartproduct`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -20,7 +20,7 @@ const TableBooking = () => {
     const bookingData = { date, time, guests };
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/tablbooking",
+        `${import.meta.env.BACKEND_UIL}/api/tablbooking`,
         bookingData,
         {
           headers: {

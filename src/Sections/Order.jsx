@@ -20,7 +20,7 @@ const [showerror, seterror] = useState(false);
   async function handleOrder(product) {
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/orders",
+     `${import.meta.env.BACKEND_UIL}/api/orders`,
         { productId: product._id },
         {
           headers: {

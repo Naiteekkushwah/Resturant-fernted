@@ -15,7 +15,7 @@ const [message, setShowMsg] = useState(false);
 
   async function fetchData() {
     try {
-      const response = await axios.get("http://localhost:4000/api/bookst", {
+      const response = await axios.get(`${import.meta.env.BACKEND_UIL}/api/bookst`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

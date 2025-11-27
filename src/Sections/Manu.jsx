@@ -82,7 +82,7 @@ const [showerror, seterror] = useState(false);
         }, [showerror]);
 async function fetchData() {
   try {
-    const response = await axios.get('http://localhost:4000/api/productfind',{
+    const response = await axios.get(`${import.meta.env.BACKEND_UIL}/api/productfind`,{
        headers:{
       Authorization:`Bearer ${localStorage.getItem('token')}`
     }
@@ -107,7 +107,7 @@ const Handle = (item) => {
 const ADDtocarte = async(item) =>{
   try {
 
-     const res = await axios.post('http://localhost:4000/api/ADDtocart',
+     const res = await axios.post(`${import.meta.env.BACKEND_UIL}/api/ADDtocart`,
     
   { productId: item._id },
   {
