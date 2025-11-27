@@ -83,7 +83,7 @@ const [showerror, seterror] = useState(false);
         const API_URL = import.meta.env.VITE_BACKEND_URL;
 async function fetchData() {
   try {
-    const response = await axios.get(`${API_URL}/api/productfind`,{
+    const response = await axios.get(`${API_URL}/productfind`,{
        headers:{
       Authorization:`Bearer ${localStorage.getItem('token')}`
     }
