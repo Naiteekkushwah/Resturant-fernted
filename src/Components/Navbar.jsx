@@ -230,7 +230,7 @@ const navigetor = useNavigate()
       {/* Mobile Menu Drawer */}
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 h-full w-2/3 backdrop-blur-xl text-gray-800 flex flex-col items-center justify-center space-y-6 transform translate-x-full opacity-0 lg:hidden z-20"
+        className="fixed top-0 right-0 h-full w-2/3 backdrop-blur-xl text-gray-800 flex flex-col items-center justify-center space-y-6 transform translate-x-full opacity-0 lg:hidden z-51"
       >
         {menuItems.map((item, i) => (
           <Link
