@@ -15,7 +15,7 @@ const [message, setShowMsg] = useState(false);
  const API_URL = import.meta.env.VITE_BACKEND_URL;
   async function fetchData() {
     try {
-      const response = await axios.get(`${API_URL}/api/bookst`, {
+      const response = await axios.get(`${API_URL}/bookst`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -48,7 +48,7 @@ export default function Login() {
    }
      const API_URL = import.meta.env.VITE_BACKEND_URL;
   try {
-    const response = await axios.post(`${API_URL}/api/login`, data);
+    const response = await axios.post(`${API_URL}/login`, data);
   
     if (response.status === 200) {
       localStorage.setItem('token',response.data.token)

@@ -21,7 +21,7 @@ const TableBooking = () => {
      const API_URL = import.meta.env.VITE_BACKEND_URL;
     try {
       const response = await axios.post(
-        `${API_URL}/api/tablbooking`,
+        `${API_URL}/tablbooking`,
         bookingData,
         {
           headers: {

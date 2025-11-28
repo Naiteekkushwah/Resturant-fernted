@@ -51,7 +51,7 @@ const [errormassage, seterrormassage] = useState('')
  }
   const API_URL = import.meta.env.VITE_BACKEND_URL;
 try {
-  const response = await axios.post(`${API_URL}/api/register`, data);
+  const response = await axios.post(`${API_URL}/register`, data);
 
   if (response.status === 200) {
       localStorage.setItem('token',response.data.token)

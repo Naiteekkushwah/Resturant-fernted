@@ -21,7 +21,7 @@ const [showerror, seterror] = useState(false);
   async function handleOrder(product) {
     try {
       const res = await axios.post(
-     `${API_URL}/api/orders`,
+     `${API_URL}/orders`,
         { productId: product._id },
         {
           headers: {

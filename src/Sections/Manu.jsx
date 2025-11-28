@@ -108,7 +108,7 @@ const Handle = (item) => {
 const ADDtocarte = async(item) =>{
   try {
 
-     const res = await axios.post(`${API_URL}/api/ADDtocart`,
+     const res = await axios.post(`${API_URL}/ADDtocart`,
     
   { productId: item._id },
   {
